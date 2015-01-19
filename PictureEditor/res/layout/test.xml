@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/choose_pic_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/choose_pic"
+            android:onClick="choose_pic" />
+
+        <Button
+            android:id="@+id/Button_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_weight="1.17"
+        android:orientation="vertical" >
+
+        <!--
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="192dp"
+            android:src="@drawable/butterfly" />
+        -->
+        
+        <com.edmodo.cropper.CropImageView
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/CropImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            custom:imageResource="@drawable/butterfly" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/Button_rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.74"
+            android:text="@string/rotate" />
+
+        <Button
+            android:id="@+id/Button_crop"
+            android:layout_width="162dp"
+            android:layout_height="match_parent"
+            android:text="@string/crop" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"></LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/fixedAspectRatio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:text="@string/fixedAspectRatio" />
+
+        <ToggleButton
+            android:id="@+id/fixedAspectRatioToggle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/aspectRatioXHeader"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content" 
+                android:text="@string/aspectRatioXHeader" />
+
+            <TextView
+                android:id="@+id/aspectRatioX"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="@string/aspectRatioX" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/aspectRatioXSeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="10" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/aspectRatioYHeader"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:ems="10" 
+            android:text="@string/aspectRatioYHeader"/>
+
+        <TextView
+            android:id="@+id/aspectRatioY"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:text="@string/aspectRatioY" />
+
+        <SeekBar
+            android:id="@+id/aspectRatioYSeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="10" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/author_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:layout_weight="1"
+            android:ems="10"
+            android:text="@string/author_name" />
+
+        <TextView
+            android:id="@+id/author_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:layout_weight="1"
+            android:ems="10"
+            android:text="@string/author_email" />
+
+    </LinearLayout>
+
+</LinearLayout>
